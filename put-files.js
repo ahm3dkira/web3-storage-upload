@@ -24,7 +24,9 @@ async function main () {
 
   console.log(`// Uploading ${files.length} files`)
   const cid = await storage.put(files)
-  let url = `https://${cid}.ipfs.dweb.link`
+  let url_old = `https://${cid}.ipfs.dweb.link`
+  let url = `https://ipfs.dweb.link/${cid}`
+
   files.map(file => file.url = `${url}${file.name}`)
 
 
