@@ -1,6 +1,6 @@
 import minimist from 'minimist'
 import { Web3Storage, getFilesFromPath } from 'web3.storage'
-
+require('dotenv').config()
 
 async function main () {
   const token = process.env.WEB3_STORAGE_TOKEN;
